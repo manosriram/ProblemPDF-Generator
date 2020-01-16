@@ -4,7 +4,6 @@ const fs = require("fs");
 
 router.post("/getps", (req, res) => {
     const {title, statement, imgsrc, constraints, In, Out, exampleIn, exampleOut, explanation, dontBreak} = req.body;
-    console.log(dontBreak);
     const data = {
         title,
         imgsrc,
