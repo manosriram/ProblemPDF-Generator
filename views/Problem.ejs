@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" moznomarginboxes mozdisallowselectionprint>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/prob.css">
+    <title><%= data.title %></title>
+</head>
+<body>
+    
+    <% if (data.title) { %>
+    <h1 id="title"><%= data.title %></h1>
+    <hr>
+    <% } %>
+
+    <h2 id="state">Problem Statement</h2>
+    <% if (data.imgsrc) { %>
+    <h2><img src=<%=data.imgsrc%>></h2>
+    <% } %>
+
+    <% if (data.statement) { %>
+    <p class="data"><%= data.statement %></p>
+    <% if (!data.dontBreak) { %>
+    <hr>
+    <% } %>
+    <% } %>
+
+    <% if (data.dontBreak) { %>
+    <div class="pagebreak"></div>
+    <% } %>
+    <% if (data.In) { %>
+    <h2 id="state">Input</h2>
+    <p class="data"><%= data.In %> </p>
+    <hr>
+    <% } %>
+
+    <% if (data.Out) { %>
+    <h2 id="state">Output</h2>
+    <p class="data"><%= data.Out %> </p>
+    <hr>
+    <% } %>
+
+    <% if (data.constraints) { %>
+    <h2 id="state">Constraints</h2>
+    <p class="data"><%= data.constraints %> </p>
+    <% } %>
+    <div class="pagebreak"></div>
+
+    <% if (data.exampleIn) { %>
+    <h2 id="state">Example Input</h2>
+    <p class="data"><%= data.exampleIn %> </p>
+    <hr>
+    <% } %>
+
+    <% if (data.exampleOut) { %>
+    <h2 id="state">Example Output</h2>
+    <p class="data"><%= data.exampleOut %> </p>
+    <hr>
+    <% } %>
+
+    <% if (data.explanation) { %>
+    <h2 id="state">Explanation</h2>
+    <p class="data"><%= data.explanation %> </p>
+    <% } %>
+</body>
+<script>
+    window.print();
+</script>
+</html>
