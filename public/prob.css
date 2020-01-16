@@ -1,6 +1,10 @@
 body {
     background: beige;
 }
+img {
+    max-width: 350px;
+    height: auto;
+}
 @page {
     size: auto; /* auto is the initial value */
     margin: 0; /* this affects the margin in the printer settings */
@@ -24,6 +28,7 @@ body {
 p,
 h4 {
     white-space: pre-wrap;
+    word-break: break-word;
 }
 #title {
     text-align: center;
@@ -32,5 +37,5 @@ h4 {
     font-size: 3.5vh;
 }
 .data {
-    font-size: 1.7vh;
+    font-size: 2vh;
 }
